@@ -3,30 +3,37 @@
 
 
 body{background-color: rgb(0, 0, 0);}
+.navbar {
+    background-color: bisque;
+}
+
+.divGrandecito {
+    display: flex;
+}
 .imagen {
     width: 30%
 }
 .Titulo{
     display:Block;
     text-align: center;
-    background-color: black;
+    background-color: rgb(68, 0, 51);
     border:solid rgb(244, 241, 241);
     font:bold;
-    color:rgb(245, 82, 0);
+    color:rgb(255, 255, 255);
     font-size: 30px;
 }
 
 li{
     display: inline;
-    color:rgb(245, 82, 0);
+    color:rgb(255, 255, 255);
     margin:40px
 }
 #logo{
     display:block;
-    width: 5%;
+    width: 20%;
 }
 
-#cajita {
+#palabrasnav {
     display:flex;
     justify-content:space-evenly;
     align-items: center;
