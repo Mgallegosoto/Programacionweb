@@ -1,15 +1,16 @@
 .principal {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     margin: 5% 10%;
     border-color: #FFFFFF;
     background-color: grey;
-    justify-content: space-between;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .fotoPrincipal img{
-    height:5%;
+    
+    width: 100%;
 }
 
 
