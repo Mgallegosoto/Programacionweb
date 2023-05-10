@@ -1,135 +1,91 @@
-.principal {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    margin: 5% 10%;
-    border-color: #FFFFFF;
-    background-color: grey;
-    border-radius: 10px;
+
+#Nombre {
+  font-size: 100px;
+
 }
-
-.fotoPrincipal img{
-    
-    width: 100%;
-}
-
-
-
-
-body {
-  background-color: #000000;
-  font-family: Arial, sans-serif;
-  color: #FFFFFF;
-  margin: 0;
-}
-
-header {
-  display: flex;
+#navbarNavDropdown {
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  font-size:  50px;
+}
+.nav-item {
+  margin: 5px;
+}
+#cajaNav {
+  background-color:bisque;
+
+
+}
+header{
+  background-color: black;
+
+}
+#Nav{
+  margin:0%;
+  background-color:bisque;
+  padding: 0;
 }
 
-#logo {
-  font-size: 36px;
-  font-weight: bold;
-  color: #00FFFF;
-  letter-spacing: 5px;
+#containerInicial {
+  width: 100%;
+  margin:0%;
 }
 
-#navbar {
-  display: flex;
+.fotoInicio {
+  width:100%;
+  margin:0%;
 }
 
-#navbar a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 24px;
-  margin-right: 20px;
-  transition: all 0.3s ease;
-}
-
-#navbar a:hover {
-  color: #00FFFF;
-}
-
-#main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 40px 20px;
-}
-
-.product {
+#containerConcepto {
   display: flex;
   flex-direction: column;
+  background-color: black;
+  border: solid red 4px;
+  color:white;
+  text-align:center;
+  justify-content: center;
+}
+  
+#parrafoConcepto {
+  margin-top: 150px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 150px;
+  font-style: italic ;
+}
+
+#nombreConcepto {
+  justify-content: center;
   align-items: center;
-  width: calc(33.33% - 40px);
-  margin-bottom: 40px;
-  border-radius: 10px;
-  background-color: #444444;
-  transition: all 0.3s ease;
+  
 }
 
-.product:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+
+
+#containerUbicacion {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border: solid red 4px;
+  color:white;
+  text-align:center;
+  justify-content: center;
+}
+#parrafoUbicacion {
+  margin-top: 150px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 150px;
+  font-style: italic ;
 }
 
-.product img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
+#nombreUbicacion {
+  justify-content: center;
+  align-items: center;
 }
 
-.product-info {
-  padding: 20px;
-  text-align: center;
-}
-
-.product h2 {
-  font-size: 24px;
-  margin: 0 0 10px;
-  text-transform: uppercase;
-}
-
-.product p {
-  font-size: 18px;
-  margin: 0;
-}
-
-.product button {
-  background-color: #00FFFF;
-  color: #000000;
-  border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.product button:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-  cursor: pointer;
-}
-
-.footer {
-  background-color: #00FFFF;
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 24px;
-}
-
-.footer a {
-  color: #000000;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.footer a:hover {
-  color: #FFFFFF;
+.fotoInicio {
+  width:100%;
+  margin:0%;
 }
 
 
