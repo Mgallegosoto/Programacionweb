@@ -1,93 +1,25 @@
 
-#Nombre {
-  font-size: 100px;
-
-}
-#navbarNavDropdown {
-  justify-content: space-between;
-  font-size:  50px;
-}
-.nav-item {
-  margin: 5px;
-}
-#cajaNav {
-  background-color:bisque;
 
 
-}
-header{
-  background-color: black;
-
-}
-#Nav{
-  margin:0%;
-  background-color:bisque;
-  padding: 0;
-}
-
-#containerInicial {
-  width: 100%;
-  margin:0%;
+#containerCasa {
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(255, 203, 126);
+    border: solid red 4px;
+    color:white;
+    text-align:center;
+    justify-content: center;
 }
 
-.fotoInicio {
-  width:100%;
-  margin:0%;
-}
-
-#containerConcepto {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  border: solid red 4px;
-  color:white;
-  text-align:center;
-  justify-content: center;
-}
-  
-#parrafoConcepto {
-  margin-top: 150px;
-  margin-left: 300px;
-  margin-right: 300px;
-  margin-bottom: 150px;
-  font-style: italic ;
-}
-
-#nombreConcepto {
-  justify-content: center;
-  align-items: center;
-  
+#nombreCasa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-
-#containerUbicacion {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  border: solid red 4px;
-  color:white;
-  text-align:center;
-  justify-content: center;
+.navbar-collapse{flex-grow: 0!important;}
+.navbar-nav{
+ 
 }
-#parrafoUbicacion {
-  margin-top: 150px;
-  margin-left: 300px;
-  margin-right: 300px;
-  margin-bottom: 150px;
-  font-style: italic ;
-}
-
-#nombreUbicacion {
-  justify-content: center;
-  align-items: center;
-}
-
-.fotoInicio {
-  width:100%;
-  margin:0%;
-}
-
-
-
 
