@@ -10,44 +10,53 @@
 </head>
 
 <body>
-  <header> 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid" id="navbar">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            
-              <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">La casa</a>
-                <a class="nav-link" href="#">Los estudios</a>
-                <a class="nav-link" href="#">El galpón</a>
-                <a class="nav-link disabled">El jardin</a>
-                <a class="nav-link" href="#">Segunda</a>
-                <a class="nav-link disabled">Contacto</a>
-                <img src="Imagenes/Logo Segunda.png" id="logo" alt="" >
-              <a> Redes sociales</a>
-              </div>
-              
-            </div>
+<header> 
+  <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+    <div id="navbar">
+      <div>
+        <img src="Imagenes/Logo Segunda.png" id="logo" alt="" href="#" >
+      </div>
+      <div>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">La casa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Los estudios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading3">El galpón</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading4">El jardín</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading5">Segunda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading6">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+  </div>
+
+  </nav>
 
 
-          </div>
-        </nav>
-  </header>
+</header>
 
   <main>
-    <main>
-
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">  
       <div id="containerCasa">
-        <h1 id="nombreCasa">La casa</h1>  
+        <h1 id="scrollspyHeading1" >La casa</h1>  
           <div id="pContainer">
             <p id="parrafoConcepto">La clásica casa chorizo porteña, devenida en segunda casa para artistas y creativos en Arévalo y Cabrera. Son 6 espacios privados y fijos disponibles para alquilar a partir de ABRIL 2023. Además, la casa tiene un jardín de 154 mts2 y un galpón de 70,5 mts2 que se puede alquilar para eventos.</p>
           </div>
       </div>
       <div>
         <div id="containerUbicacion">
-          <h1 id="nombreUbicacion">Ubicacion</h1>  
+          <h1 id="scrollspyHeading2">Ubicacion</h1>  
             <div id="pContainer">
               <img src="..." class="img-fluid" alt="..." id="fotoMapa">
             </div>

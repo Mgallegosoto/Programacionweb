@@ -1,25 +1,33 @@
-
-
+*   {border: solid rgb(0, 0, 0) 1px}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 30px;
+}
 
 #containerCasa {
     display: flex;
     flex-direction: column;
     background-color:rgb(255, 203, 126);
-    border: solid red 4px;
     color:white;
     text-align:center;
     justify-content: center;
 }
 
-#nombreCasa {
+#scrollspyHeading1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
+    font-style: italic;
 }
 
-
-.navbar-collapse{flex-grow: 0!important;}
-.navbar-nav{
- 
+#pContainer {
+    margin-top: 150px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 150px;
+    font-style: italic ;
+    color: black;
 }
-
