@@ -1,9 +1,122 @@
-*   {border: solid rgb(0, 0, 0) 1px}
+/* *{border:1px solid black}  */
+
+
 #navbar {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    background-color:rgb(245, 231, 224);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+.barras {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 5px 0;
+}
+#burga {
+    margin: 55px;
+    display: inline-block;
+    cursor: pointer;
+    background-color:rgb(246, 236, 231);
+    /* border: 0px; */
+}
+#algo {
+    border: 1px solid black;
+    background-color:rgb(246, 236, 231);
+    width: 100px;
+    height: 30px;
+    margin: 55px;
+}
+
+#home-image{
+    border: black 1px solid;
+}
+
+#la-casa {
+    background-color:rgb(246, 236, 231);
+    padding: 50px;
+}
+#titulo {
+    /* background-color: rgb(251, 115, 0); */
+    padding: 40px;
+}
+
+p {
+    /* text-align: center; */
+    text-align: justify;
+}
+h1 {
+    text-align: center;
+    margin-bottom:50px;
+    font-family:"";
+
+}
+
+main div {
+    margin: 100px;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #navbar {
     display: flex;
     justify-content: space-between;
     font-size: 20px;
     margin: 30px;
+    background-color:burlywood;
 }
 
 #containerCasa {
@@ -31,3 +144,41 @@
     font-style: italic ;
     color: black;
 }
+.hola {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin:6px 0;
+    transition: 0,4s;
+
+}
+#burga {
+    margin: 15px;
+    display: inline-block;
+    cursor: pointer;
+    background-color:white;
+    border: 0px;
+}
+
+#logo {
+    justify-items: center;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    justify-items: center;
+}
+/* Rotate first bar */
+/* .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  /* Fade out the second bar */
+  /* .change .bar2 {opacity: 0;} */
+  
+  /* Rotate last bar */
+  /* .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  } */ 
