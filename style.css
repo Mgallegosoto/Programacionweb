@@ -77,10 +77,9 @@ width: 100%;
       #navbar > * {
         flex-basis: auto;
         margin-bottom: 0;
-      }
-}
-
-
+      }   
+} 
+   
 #burga {
     margin: 55px;
     display: inline-block;

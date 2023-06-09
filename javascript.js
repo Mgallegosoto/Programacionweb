@@ -9,5 +9,3 @@
 //     alert("Usuario validado");
 //   }
 // }
-
-  
