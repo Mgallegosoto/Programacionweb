@@ -10,52 +10,36 @@
     <script src="javascript.js"></script>
 
   </head>
-
-
 <body>
-
     <header>
-      <!-- Falta hacer responsive la navbar y ver como desplegar el menu de las tres barritas -->
-      
-      <div id="navbar">  
-
-         <div id="algo">
-          <h1 id="suscribe"> SUSCRIBIRME </h1>
-        </div>
-        <div id="logo">
-          <img id="logoIMG" src="Imagenes/Logo Segunda.png">
-        </div>
-        <!-- <div id = "burga">
-          <div class="barras" id="bar1"></div>
-          <div class="barras" id="bar2"></div>
-          <div class="barras" id="bar3"></div>
-        </div> -->
-        <!-- <nav class="desplegable">
-          <ul class="desplegable-list">
-            <li><a href="#home">La casa</a></li>
-            <li><a href="#about">Los estudios</a></li>
-            <li><a href="#services">El galpon</a></li>
-            <li><a href="#contact">El jardin</a></li>
-            <li><a href="#contact">Segunda</a></li>
-          </ul> -->
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-              <div id = "burga">
-                <div class="barras" id="bar1"></div>
-                <div class="barras" id="bar2"></div>
-                <div class="barras" id="bar3"></div>
-              </div>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#la-casa">La Casa</a></li>
-              <li><a class="dropdown-item" href="#los-estudios">Los Estudios</a></li>
-              <li><a class="dropdown-item" href="#el-galpon">El galpon</a></li>
-              <li><a class="dropdown-item" href="#el-jardin">El jardin</a></li>
-              <li><a class="dropdown-item" href="#segunda">Segunda</a></li>
-
-            </ul>
-          </li>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Segunda Casa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <form class="d-flex" id="search-form">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="search-input">
+                  <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#la-casa">La Casa</a></li>
+                    <li><a class="dropdown-item" href="#los-estudios">Los Estudios</a></li>
+                    <li><a class="dropdown-item" href="#el-galpon">El Galpón</a></li>
+                    <li><a class="dropdown-item" href="#el-jardin">El Jardin</a></li>
+                    <li><a class="dropdown-item" href="#segunda">El Segunda</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
 
       </div> 
@@ -64,8 +48,7 @@
 
       <main>
 
-        <img src="Imagenes/IMG_8684.jpeg" class="img-fluid" alt="..." id="home-image">
-
+        <img src="./Imagenes/IMG_8684.jpeg" class="img-fluid" alt="...">
         <div class="seccion" id="la-casa" >
           
           <h1 id="titulo"> La Casa </h1>
@@ -105,30 +88,6 @@
             <li> Guías de yoga, meditación, astrología, coaching, arte y terapias varias</li>
           </ul>
 
-          <div class="boton-container">
-            <button onclick="window.location.href='Estudios.html'" class="ver-mas">Ver más</button>
-          </div>
-          <!-- El div de abajo deberia ir en otra pagina "Estudios" -->
-          <!-- <div id="fotos-layout"> 
-            <div class="columna-fotos" id="columna1">
-              <div class="imagen-container">
-                <a>
-                  <img src="Imagenes/PHOTO-2023-02-23-14-57-02.jpg" class="img-fluid" alt="...">
-                </a>
-              </div>
-              <div class="imagen-container">
-                <a>
-                  <img src="Imagenes/PHOTO-2023-02-23-14-57-02 10.jpg" class="img-fluid" alt="...">
-                </a>
-              </div>
-             
-            </div>
-            <div class= "columna-fotos" id="columna2"> 
-
-            </div>
-          </div> -->
-
-        </div>
         <div class="seccion" id="el-galpon">
           <h1 id="titulo"> El Galpón </h1>
           <p> Espacio de 80 m2 de estilo industrial disponible para alquiler para reuniones o eventos
@@ -154,7 +113,77 @@
             <br> Arte, espiritualidad, diseño, paisajismo, intereses que comparten un lenguaje y que quisimos
             que coexistan en nuestra Segunda Casa.</p>
         </div>
+
+
+
+        <div class="seccion" id="reservar">
+          <h1 id="titulo"> Reservar </h1>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="./Imagenes/jardin2.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Estudio 1</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="./Imagenes/interior.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Estudio 2</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="./Imagenes/arte2.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Estudio 3</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="./Imagenes/jardin.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Estudio 4</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="./Imagenes/estudio.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Estudio 5</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="./Imagenes/IMG_8675.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Estudio 6</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
+
+
 
   </header>
 

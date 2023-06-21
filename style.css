@@ -7,89 +7,13 @@
 *{font-family:'Open Sans', sans-serif;
 font-size: 25px}
 
-
-#navbar {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    background-color:rgb(245, 231, 224);
-    padding: 10px;
-    flex-wrap: nowrap;
-}
-  
-#logo {
-    display: flex;
-    align-items: center;
-    background-color: rgb(245, 231, 224);
+.navbar-brand {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
-#logoIMG {
-width: 100%;
-}
-
-.barras {
-    width: 35px;
-    height: 3px;
-    background-color: black;
-    margin: 5px 0;
-}
-
-@media screen and (max-width: 768px) {
-    #navbar {
-      flex-direction: row;
-      justify-content: center;
-    }
-  
-    #logo {
-      margin: 0 10px;
-    }
-  
-    #burga {
-      margin: 0 10px;
-    }
-  
-    .barras {
-      margin: 2px 0;
-    }
-
-    #logoIMG {
-        width: 80%; 
-        height: auto; 
-      }
-      #navbar > * {
-        flex-basis: auto;
-        margin-bottom: 0;
-      }   
-} 
-   
-#burga {
-    margin: 55px;
-    display: inline-block;
-    cursor: pointer;
-    background-color:rgb(246, 236, 231);
-    /* border: 0px; */
-}
-
-
-.dropdown-item {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 50px;
-}
-
-
-#algo {
-    /* border: 1px solid black; */
-    background-color:rgb(246, 236, 231);
-    margin: 55px;
-}
-
-#suscribe {
-    font-size: 30px;
-}
-
-.seccion {
-    padding: 50px;
-}
+/* .seccion {
+     padding: 50px; 
+} */
 
 #home-image{
     border: black 1px solid;
@@ -117,209 +41,17 @@ h1 {
 
 }
 
-/* main div {
-    margin: 100px;
-} */
-
 #los-estudios {
     background-color:rgb(246, 236, 231);
     padding: 50px;
 }
-
-
-/* #lista_ideal {
-    margin-left: 50px;
-    margin-top: 20px;
-} */
 
 #lista-ideal {
     margin-left: 20px;
     list-style-type: disc;
   }
   
-  #lista-ideal li {
+#lista-ideal li {
     margin-bottom: 5px;
   }
 
-#verficia-edad {
-    margin: 50px;
-    background-color: beige;
-}
-  
-
-/* .layout {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-  }
-  
-.photo-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-.photo-item {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  } */
-
-  .layout {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan a una sola columna */
-  }
-  
-  .photo-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%; /* Asegura que cada columna ocupe todo el ancho disponible */
-  }
-  
-  .photo-item {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-
-.ver.mas{
-    align-self: center;
-    padding: 10px 20px;
-    background-color: #e91e63;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  
-}
-.boton-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* #navbar {
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    margin: 30px;
-    background-color:burlywood;
-}
-
-#containerCasa {
-    display: flex;
-    flex-direction: column;
-    background-color:rgb(255, 203, 126);
-    color:white;
-    text-align:center;
-    justify-content: center;
-}
-
-#scrollspyHeading1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-style: italic;
-}
-
-#pContainer {
-    margin-top: 150px;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-bottom: 150px;
-    font-style: italic ;
-    color: black;
-}
-.hola {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin:6px 0;
-    transition: 0,4s;
-
-}
-#burga {
-    margin: 15px;
-    display: inline-block;
-    cursor: pointer;
-    background-color:white;
-    border: 0px;
-}
-
-#logo {
-    justify-items: center;
-    
-}
-
-nav {
-    display: flex;
-    justify-content: right;
-    justify-items: center;
-}
-/* Rotate first bar */
-/* .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
-  }
-  
-  /* Fade out the second bar */
-  /* .change .bar2 {opacity: 0;} */
-  
-  /* Rotate last bar */
-  /* .change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
-  } */ 
