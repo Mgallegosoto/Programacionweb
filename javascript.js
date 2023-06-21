@@ -75,42 +75,235 @@
     // renderProducts();
 
 
-    // Obtener referencia al contenedor del carrito
-const cartContainer = document.getElementById('cart-container');
+//     // Obtener referencia al contenedor del carrito
+// const cartContainer = document.getElementById('cart-container');
 
-// Arreglo para almacenar los productos en el carrito
-let cartItems = [];
+// // Arreglo para almacenar los productos en el carrito
+// let cartItems = [];
+
+// // Función para agregar un producto al carrito
+// function addToCart(product) {
+//   cartItems.push(product);
+//   renderCart();
+// }
+
+// // Función para renderizar el contenido del carrito
+// function renderCart() {
+//   // Vaciar el contenedor del carrito
+//   cartContainer.innerHTML = '';
+
+//   // Recorrer los productos en el carrito y crear elementos HTML correspondientes
+//   cartItems.forEach((product) => {
+//     const productElement = document.createElement('div');
+//     productElement.classList.add('cart-item');
+
+//     const titleElement = document.createElement('h5');
+//     titleElement.textContent = product.title;
+//     productElement.appendChild(titleElement);
+
+//     // Añade cualquier otra información adicional del producto, como imagen, precio, etc.
+
+//     cartContainer.appendChild(productElement);
+//   });
+// }
+
+// // Ejemplo de uso
+// const product1 = { title: 'Producto 1' };
+// const product2 = { title: 'Producto 2' };
+
+// addToCart(product1);
+// addToCart(product2);
+
+// const products = [
+//     { 
+//       title: 'Pinceles al óleo',
+//     //   image: './Imagenes/pinceles.webp',
+//       description: 'Descripción del producto.',
+//       price: 10.99
+//     },
+//     { 
+//       title: 'Mesa arquitectura',
+//     //   image: './Imagenes/mesa aaa.jpeg',
+//       description: 'Descripción del producto.',
+//       price: 99.99
+//     },
+//     // Agrega más objetos de producto según tus necesidades
+//   ];
+  
+// const cartItems = [];
+  
+// function addToCart(productId) {
+//     const product = products.find((item, index) => index === productId - 1);
+//     if (product) {
+//       const existingItem = cartItems.find((item) => item.productId === productId);
+//       if (existingItem) {
+//         existingItem.quantity += 1;
+//       } else {
+//         cartItems.push({
+//           productId,
+//           product,
+//           quantity: 1,
+//         });
+//       }
+//       renderCart();
+//     }
+//   }
+  
+// function removeFromCart(productId) {
+//     const itemIndex = cartItems.findIndex((item) => item.productId === productId);
+//     if (itemIndex !== -1) {
+//       cartItems.splice(itemIndex, 1);
+//       renderCart();
+//     }
+//   }
+  
+// function renderCart() {
+//     const cartItemsContainer = document.getElementById('cart-items');
+//     cartItemsContainer.innerHTML = '';
+  
+//     cartItems.forEach((item) => {
+//       const product = item.product;
+  
+//       const listItem = document.createElement('li');
+//       listItem.classList.add('cart-item');
+  
+//     //   const imageElement = document.createElement('img');
+//     //   imageElement.src = product.image;
+//     //   imageElement.alt = product.title;
+//     //   listItem.appendChild(imageElement);
+  
+//       const titleElement = document.createElement('h5');
+//       titleElement.textContent = product.title;
+//       listItem.appendChild(titleElement);
+  
+//       const descriptionElement = document.createElement('p');
+//       descriptionElement.textContent = product.description;
+//       listItem.appendChild(descriptionElement);
+  
+//       const priceElement = document.createElement('p');
+//       priceElement.textContent = `$${product.price.toFixed(2)}`;
+//       listItem.appendChild(priceElement);
+  
+//       const quantityElement = document.createElement('p');
+//       quantityElement.textContent = `Cantidad: ${item.quantity}`;
+//       listItem.appendChild(quantityElement);
+  
+//       const removeButton = document.createElement('button');
+//       removeButton.textContent = 'Eliminar';
+//       removeButton.addEventListener('click', () => {
+//         removeFromCart(item.productId);
+//       });
+//       listItem.appendChild(removeButton);
+  
+//       cartItemsContainer.appendChild(listItem);
+//     });
+//   }
+  
+// Variable para almacenar los productos en el carrito
+var cartItems = [];
 
 // Función para agregar un producto al carrito
-function addToCart(product) {
-  cartItems.push(product);
-  renderCart();
+function addToCart(productId) {
+  // Buscar el producto en el carrito por su ID
+  var product = cartItems.find(function(item) {
+    return item.id === productId;
+  });
+
+  // Si el producto no existe en el carrito, agregarlo con cantidad 1
+  if (!product) {
+    cartItems.push({ id: productId, quantity: 1 });
+  } else {
+    // Si el producto ya existe, incrementar la cantidad
+    product.quantity++;
+  }
+
+  // Actualizar el carrito en la página
+  updateCart();
 }
 
-// Función para renderizar el contenido del carrito
-function renderCart() {
-  // Vaciar el contenedor del carrito
-  cartContainer.innerHTML = '';
+// Función para eliminar un producto del carrito
+function removeFromCart(productId) {
+  // Buscar el producto en el carrito por su ID
+  var productIndex = cartItems.findIndex(function(item) {
+    return item.id === productId;
+  });
 
-  // Recorrer los productos en el carrito y crear elementos HTML correspondientes
-  cartItems.forEach((product) => {
-    const productElement = document.createElement('div');
-    productElement.classList.add('cart-item');
+  // Si el producto existe en el carrito, decrementar la cantidad
+  if (productIndex !== -1) {
+    cartItems[productIndex].quantity--;
 
-    const titleElement = document.createElement('h5');
-    titleElement.textContent = product.title;
-    productElement.appendChild(titleElement);
+    // Si la cantidad llega a 0, eliminar el producto del carrito
+    if (cartItems[productIndex].quantity === 0) {
+      cartItems.splice(productIndex, 1);
+    }
+  }
 
-    // Añade cualquier otra información adicional del producto, como imagen, precio, etc.
+  // Actualizar el carrito en la página
+  updateCart();
+}
 
-    cartContainer.appendChild(productElement);
+// Función para actualizar el carrito en la página
+function updateCart() {
+  var cartItemsElement = document.getElementById('cart-items');
+  var totalPrice = 0;
+
+  // Limpiar el contenido actual del carrito
+  cartItemsElement.innerHTML = '';
+
+  // Recorrer los productos en el carrito y agregarlos al HTML
+  cartItems.forEach(function(item) {
+    var product = getProductById(item.id);
+    var productPrice = calculateProductPrice(product, item.quantity);
+    totalPrice += productPrice;
+
+    var li = document.createElement('li');
+    li.textContent = product.name + ' x ' + item.quantity + ' - $' + productPrice.toFixed(2);
+    cartItemsElement.appendChild(li);
+  });
+
+  // Mostrar el precio total acumulado en el carrito
+  var totalElement = document.createElement('li');
+  totalElement.textContent = 'Total: $' + totalPrice.toFixed(2);
+  cartItemsElement.appendChild(totalElement);
+}
+
+// Función auxiliar para obtener un producto por su ID
+function getProductById(productId) {
+  // Aquí puedes implementar la lógica para obtener el producto de tu sistema
+  // Por simplicidad, asumiremos que tienes una lista de productos predefinidos
+  var products = [
+    { id: 1, name: 'Pinceles al óleo', price: 10 },
+    { id: 2, name: 'Mesa arquitectura', price: 50 },
+    // Agrega más productos aquí...
+  ];
+
+  return products.find(function(product) {
+    return product.id === productId;
   });
 }
 
-// Ejemplo de uso
-const product1 = { title: 'Producto 1' };
-const product2 = { title: 'Producto 2' };
+// Función auxiliar para obtener un producto por su ID
+function getProductById(productId) {
+    var products = [
+      { id: 1, name: 'Pinceles al óleo', price: 10 },
+      { id: 2, name: 'Mesa arquitectura', price: 50 },
+      { id: 3, name: 'Trípode', price: 30 },
+      { id: 4, name: 'Cámara de fotos', price: 200 },
+      { id: 5, name: 'Luz para fotografías', price: 25 },
+      { id: 6, name: 'Libro de arte', price: 15 },
+      { id: 7, name: 'Variedad de telas', price: 12 },
+      { id: 8, name: 'Pintura', price: 8 },
+      { id: 9, name: 'Lápices negros', price: 5 },
+      // Agrega más productos aquí...
+    ];
+  
+    return products.find(function(product) {
+      return product.id === productId;
+    });
+  }
+  
 
-addToCart(product1);
-addToCart(product2);
-
+// Función auxiliar para calcular el precio de un producto en función de su cantidad
+function calculateProductPrice(product, quantity) {
+  return product.price * quantity;
+}
