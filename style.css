@@ -13,22 +13,59 @@ font-size: 25px}
 }
 #navbar {
   padding: 0px;
+  /* position: fixed; */
 }
 .seccion {
-     padding: 80px; 
+  padding: 80px; 
 }
 .dropdown-menu {
   padding: 0px;
 }
 
-#home-image{
-    border: black 1px solid;
+.fila {
+  box-sizing: border-box;
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+.columna {
+  flex: 25%;
+  padding: 5px;
 }
 
-#la-casa {
-    background-color:rgb(246, 236, 231);
-    padding: 50px;
+.columna img {
+  margin-top: 5px;
 }
+
+/* body {
+  padding: 0;
+  margin:0;
+} */
+img {
+  width: 100%;
+}
+
+@media (max-width:800px) {
+  .columna {
+    flex:50%
+  }
+}
+@media (max-width:600px) {
+  .columna {
+    flex:100%
+  }
+}
+@media (max-width:478px) {
+  .columna {
+    flex:100%
+  }
+}
+
+.seccion {
+  padding: 50px;
+  background-color: rgb(246, 236, 231);
+}
+
 #titulo {
     /* background-color: rgb(251, 115, 0); */
     padding: 40px;
@@ -47,15 +84,10 @@ h1 {
 
 }
 
-#los-estudios {
-    background-color:rgb(246, 236, 231);
-    padding: 50px;
-}
-
-#lista-ideal {
+/* #lista-ideal {
     margin-left: 20px;
     list-style-type: disc;
-  }
+  } */
   
 #lista-ideal li {
     margin-bottom: 5px;
@@ -106,14 +138,20 @@ h2 {
 
 /* Estilos para las imágenes de los productos */
 .card-img-top {
-  height: 200px;
+  height: 500px;
   object-fit: cover;
 }
 
 /* Estilos para los títulos de los productos */
 .card-title {
-  font-size: 20px;
+  font-size: 40px;
   margin-bottom: 10px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between ;
 }
 
 /* Estilos para los botones de agregar al carrito */
@@ -124,8 +162,23 @@ h2 {
 }
 
 /* Estilos para el responsive */
-/* @media screen and (max-width: 768px) {
-  .products-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+@media screen and (max-width: 768px) {
+  .card-img-top {
+    height: 300px;
+    object-fit: cover;
   }
-} */
+} 
+
+.elemento-Carrito {
+margin: 7px;
+font-family:'Bebas Neue', sans-serif;
+
+}
+
+.elemento-Eliminar {
+  margin-left: 25px;
+}
+
+h5 {
+  font-family: 'Bebas Neue', sans-serif;
+}

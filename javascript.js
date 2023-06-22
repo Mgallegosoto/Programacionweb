@@ -221,79 +221,82 @@ function addToCart(productId) {
   updateCart();
 }
 
-// Función para eliminar un producto del carrito
 function removeFromCart(productId) {
-  // Buscar el producto en el carrito por su ID
-  var productIndex = cartItems.findIndex(function(item) {
-    return item.id === productId;
-  });
-
-  // Si el producto existe en el carrito, decrementar la cantidad
-  if (productIndex !== -1) {
-    cartItems[productIndex].quantity--;
-
-    // Si la cantidad llega a 0, eliminar el producto del carrito
-    if (cartItems[productIndex].quantity === 0) {
-      cartItems.splice(productIndex, 1);
+    // Buscar el producto en el carrito por su ID
+    var productIndex = cartItems.findIndex(function(item) {
+      return item.id === productId;
+    });
+  
+    // Si el producto existe en el carrito, decrementar la cantidad
+    if (productIndex !== -1) {
+      cartItems[productIndex].quantity--;
+  
+      // Si la cantidad llega a 0, eliminar el producto del carrito
+      if (cartItems[productIndex].quantity === 0) {
+        cartItems.splice(productIndex, 1);
+      }
     }
+  
+    // Actualizar el carrito en la página
+    updateCart();
   }
-
-  // Actualizar el carrito en la página
-  updateCart();
-}
+  
 
 // Función para actualizar el carrito en la página
 function updateCart() {
-  var cartItemsElement = document.getElementById('cart-items');
-  var totalPrice = 0;
-
-  // Limpiar el contenido actual del carrito
-  cartItemsElement.innerHTML = '';
-
-  // Recorrer los productos en el carrito y agregarlos al HTML
-  cartItems.forEach(function(item) {
-    var product = getProductById(item.id);
-    var productPrice = calculateProductPrice(product, item.quantity);
-    totalPrice += productPrice;
-
-    var li = document.createElement('li');
-    li.textContent = product.name + ' x ' + item.quantity + ' - $' + productPrice.toFixed(2);
-    cartItemsElement.appendChild(li);
-  });
-
-  // Mostrar el precio total acumulado en el carrito
-  var totalElement = document.createElement('li');
-  totalElement.textContent = 'Total: $' + totalPrice.toFixed(2);
-  cartItemsElement.appendChild(totalElement);
-}
-
+    var cartItemsElement = document.getElementById('cart-items');
+    var totalPrice = 0;
+  
+    // Limpiar el contenido actual del carrito
+    cartItemsElement.innerHTML = '';
+  
+    // Recorrer los productos en el carrito y agregarlos al HTML
+    // Dentro de la función updateCart()
+    cartItems.forEach(function(item) {
+        var product = getProductById(item.id);
+        var productPrice = calculateProductPrice(product, item.quantity);
+        totalPrice += productPrice;
+    
+        var li = document.createElement('li');
+        li.textContent = product.name + ' x ' + item.quantity + ' - $' + productPrice.toFixed(2);
+        li.classList.add("elemento-Carrito")
+    
+        // Agrega un botón de eliminación al elemento li
+        var deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Eliminar';
+        deleteButton.classList.add('btn', 'btn-danger', 'delete-button');
+        deleteButton.setAttribute('data-product-id', item.id);
+        deleteButton.classList.add("elemento-Eliminar")
+        deleteButton.addEventListener('click', function() {
+        var productId = parseInt(this.getAttribute('data-product-id'));
+        removeFromCart(productId);
+        });
+  
+        li.appendChild(deleteButton);
+        cartItemsElement.appendChild(li);
+    });
+  
+  
+    // Mostrar el precio total acumulado en el carrito
+    var totalElement = document.createElement('ul');
+    totalElement.textContent = 'Total: $' + totalPrice.toFixed(2);
+    cartItemsElement.appendChild(totalElement);
+  }
+  
 // Función auxiliar para obtener un producto por su ID
-function getProductById(productId) {
-  // Aquí puedes implementar la lógica para obtener el producto de tu sistema
-  // Por simplicidad, asumiremos que tienes una lista de productos predefinidos
-  var products = [
-    { id: 1, name: 'Pinceles al óleo', price: 10 },
-    { id: 2, name: 'Mesa arquitectura', price: 50 },
-    // Agrega más productos aquí...
-  ];
-
-  return products.find(function(product) {
-    return product.id === productId;
-  });
-}
 
 // Función auxiliar para obtener un producto por su ID
 function getProductById(productId) {
     var products = [
-      { id: 1, name: 'Pinceles al óleo', price: 10 },
-      { id: 2, name: 'Mesa arquitectura', price: 50 },
-      { id: 3, name: 'Trípode', price: 30 },
-      { id: 4, name: 'Cámara de fotos', price: 200 },
-      { id: 5, name: 'Luz para fotografías', price: 25 },
-      { id: 6, name: 'Libro de arte', price: 15 },
-      { id: 7, name: 'Variedad de telas', price: 12 },
-      { id: 8, name: 'Pintura', price: 8 },
-      { id: 9, name: 'Lápices negros', price: 5 },
+      { id: 1, name: 'Pinceles al óleo', price: 1000 },
+      { id: 2, name: 'Mesa arquitectura', price: 10000 },
+      { id: 3, name: 'Trípode', price: 7500 },
+      { id: 4, name: 'Cámara de fotos', price: 35000 },
+      { id: 5, name: 'Luz para fotografías', price: 5000 },
+      { id: 6, name: 'Libro de arte', price: 4000 },
+      { id: 7, name: 'Variedad de telas', price: 2200 },
+      { id: 8, name: 'Pintura', price: 2000 },
+      { id: 9, name: 'Lápices negros', price: 750 },
       // Agrega más productos aquí...
     ];
   
@@ -307,3 +310,29 @@ function getProductById(productId) {
 function calculateProductPrice(product, quantity) {
   return product.price * quantity;
 }
+
+function clearCart() {
+    // Vaciar el arreglo de productos en el carrito
+    cartItems = [];
+  
+    // Actualizar el carrito en la página
+    updateCart();
+}
+
+function checkout() {
+    // Verificar si el carrito está vacío
+    if (cartItems.length === 0) {
+      alert("El carrito está vacío");
+      return; // Salir de la función sin continuar con la finalización de la compra
+    }
+  
+    // Realizar aquí las acciones necesarias para finalizar la compra, como enviar los datos a un servidor, procesar el pago, etc.
+  
+    // Mostrar un mensaje al usuario
+    alert("Su compra se ha realizado con éxito");
+  
+    // Vaciar el carrito
+    clearCart();
+  }
+  
+  

@@ -13,21 +13,46 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav>
-
-  </nav>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar" >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Segunda Casa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#products-container">Productos</a></li>
+                    <li><a class="dropdown-item" href="#Carrito">Carrito de compras</a></li>
+                    <li><a class="dropdown-item" href="#footer">Contacto</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div> 
+    </header>
 
   <!-- Contenido principal -->
   <main>
-    <h1>Productos</h1>
+    <div>
+        <h1 id="title">Productos</h1>
+    </div>
     <div class="products-container">
       <!-- Producto 1 -->
       <div class="card" style="width: 18rem;">
         <img src="./Imagenes/pinceles.webp" class="card-img-top" alt="Producto 1">
         <div class="card-body">
-          <h5 class="card-title">Pinceles al óleo</h5>
-          <p class="card-text">Descripción del producto.</p>
+          <h1 class="card-title">Pinceles al óleo</h1>
+          <p class="card-text">Conjunto de pinceles diseñados específicamente para su uso con pintura al óleo. 
+            Ideales para artistas y aficionados que buscan crear hermosas obras de arte con esta técnica.</p>
+          <h5> Precio: $1000 </h5>
           <button onclick="addToCart(1)" class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
@@ -36,8 +61,11 @@
       <div class="card" style="width: 18rem;">
         <img src="./Imagenes/mesa aaa.jpeg" class="card-img-top" alt="Producto 2">
         <div class="card-body">
-          <h5 class="card-title">Mesa arquitectura</h5>
-          <p class="card-text">Descripción del producto.</p>
+          <h1 class="card-title">Mesa arquitectura</h1>
+          <p class="card-text">Mesa diseñada para arquitectos y diseñadores, con superficie amplia y funcionalidades
+             específicas. Perfecta para dibujar planos, hacer bocetos y trabajar en proyectos arquitectónicos.</p>
+          <h5> Precio: $10000 </h5>
+
           <button onclick="addToCart(2)" class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
@@ -46,18 +74,24 @@
       <div class="card" style="width: 18rem;">
         <img src="./Imagenes/tripode.webp" class="card-img-top" alt="Producto 3">
         <div class="card-body">
-          <h5 class="card-title">Tripode</h5>
-          <p class="card-text">Descripción del producto.</p>
+          <h1 class="card-title">Tripode</h1>
+          <p class="card-text">Soporte estable y ajustable para partituras musicales. Proporciona un soporte confiable durante
+             la interpretación musical, ya sea en casa, en el estudio de grabación o en presentaciones en vivo.</p>
+          <h5> Precio: $7500 </h5>
+
           <button onclick="addToCart(3)" class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
 
       <!-- Producto 4 -->
       <div class="card" style="width: 18rem;">
-        <img src="./Imagenes/fotoscamara.webp" class="card-img-top" alt="Producto 4">
+        <img src="./Imagenes/camaraFotos.webp" class="card-img-top" alt="Producto 4">
         <div class="card-body">
-          <h5 class="card-title">Camara de fotos</h5>
-          <p class="card-text">Descripción del producto.</p>
+          <h1 class="card-title">Camara de fotos</h1>
+          <p class="card-text">Dispositivo electrónico que captura imágenes y momentos especiales. Ya sea para aficionados o fotógrafos
+             profesionales, una cámara de fotos ofrece la oportunidad de inmortalizar momentos únicos y expresar la creatividad a 
+             través de la fotografía.</p>
+          <h5> Precio: $35000 </h5>   
           <button onclick="addToCart(4)" class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
@@ -66,8 +100,11 @@
       <div class="card" style="width: 18rem;">
         <img src="./Imagenes/luzpa.jpeg" class="card-img-top" alt="Producto 5">
         <div class="card-body">
-          <h5 class="card-title">Luz para fotografias</h5>
-          <p class="card-text">Descripción del producto.</p>
+          <h1 class="card-title">Luz para fotografias</h1>
+          <p class="card-text">Iluminación adicional utilizada en fotografía para mejorar la calidad de la imagen. Ya sea en
+            un estudio o en exteriores, una luz para fotografías ayuda a controlar y ajustar la iluminación, resaltando los
+            sujetos y creando efectos deseados. No sabrás que lo necesitas hasta tenerlo</p>
+          <h5> Precio: $5000 </h5>
           <button onclick="addToCart(5)" class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
@@ -76,8 +113,11 @@
       <div class="card" style="width: 18rem;">
         <img src="./Imagenes/libroArte.jpeg" class="card-img-top" alt="Producto 6">
         <div class="card-body">
-          <h5 class="card-title">Libro de arte</h5>
-          <p class="card-text">Descripción del producto.</p>
+          <h1 class="card-title">Libro de arte</h1>
+          <p class="card-text">Una obra que abarca una amplia gama de temas relacionados con el arte, como técnicas de pintura,
+             historia del arte, teoría del color y más. Un libro de arte general es una fuente de inspiración y conocimiento para
+              artistas, estudiantes de arte y amantes del arte en general.</p>
+          <h5> Precio: $4000 </h5>
           <button onclick="addToCart(6)" class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
@@ -86,8 +126,10 @@
       <div class="card" style="width: 18rem;">
         <img src="./Imagenes/telas.jpeg" class="card-img-top" alt="Producto 7">
         <div class="card-body">
-          <h5 class="card-title">Variedad de telas</h5>
-          <p class="card-text">Descripción del producto.</p>
+          <h1 class="card-title">Variedad de telas</h1>
+          <p class="card-text">Colección de diferentes tipos de tela que pueden ser utilizadas para proyectos de costura, manualidades,
+             decoración del hogar y más. Ofrecen opciones creativas para dar vida a ideas y diseños únicos.</p>
+          <h5> Precio: $2200 </h5>
           <button onclick="addToCart(7)" class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
@@ -96,8 +138,10 @@
       <div class="card" style="width: 18rem;">
         <img src="./Imagenes/Pinturas.webp" class="card-img-top" alt="Producto 8">
         <div class="card-body">
-          <h5 class="card-title">Pintura</h5>
-          <p class="card-text">Descripción del producto.</p>
+          <h1 class="card-title">Pintura</h1>
+          <p class="card-text">Una selección de pinturas en diferentes colores y tipos, diseñada para ser utilizada
+             en la creación de cuadros. La pintura para cuadros permite a los artistas plasmar su visión artística en lienzos.</p>
+          <h5> Precio: $2000 </h5>
           <button onclick="addToCart(8)" class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
@@ -106,20 +150,30 @@
       <div class="card" style="width: 18rem;">
         <img src="./Imagenes/lapices.jpeg" class="card-img-top" alt="Producto 9">
         <div class="card-body">
-          <h5 class="card-title">Lapices negroc</h5>
-          <p class="card-text">Ideales para escribir sobre hoja en blanco. Para dibujar y trazar maquetas. 2HB</p>
+          <h1 class="card-title">Lapiz negro</h1>
+          <p class="card-text">Lápices de alta calidad especialmente diseñados para arquitectos, dibujantes y artistas.
+             Variedad de grados de dureza y proporcionan líneas precisas y definidas. 2HB. Mina resistente y grafito único</p>
+          <h5> Precio: $750 </h5>
           <button onclick="addToCart(9)" class="btn btn-primary">Agregar al carrito</button>
         </div>
       </div>
     </div>
 
     <!-- Carrito de compras -->
-    <h2>Carrito de compras</h2>
+    <h2 id="Carrito">Carrito de compras</h2>
     <ul id="cart-items"></ul>
+    <button onclick="clearCart()" class="btn btn-danger">Vaciar carrito</button>
+    <button onclick="checkout()" class="btn btn-success">Finalizar compra</button>
+
+
+
+
+
+    
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer id ="footer">
     <p>Todos los derechos reservados © 2023</p>
   </footer>
 </body>
