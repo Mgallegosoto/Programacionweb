@@ -159,6 +159,8 @@ h2 {
   display: block;
   width: 100%;
   margin-top: auto;
+  background-color: rgb(252, 115, 0);
+  font-family: 'Bebas Neue', sans-serif ;
 }
 
 /* Estilos para el responsive */
