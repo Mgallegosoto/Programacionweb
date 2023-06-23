@@ -9,11 +9,11 @@ font-size: 25px}
 
 .navbar-brand {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 50px;
+  font-size:none;
 }
+
 #navbar {
   padding: 0px;
-  /* position: fixed; */
 }
 .seccion {
   padding: 80px; 
@@ -41,6 +41,7 @@ font-size: 25px}
   padding: 0;
   margin:0;
 } */
+
 img {
   width: 100%;
 }
@@ -59,6 +60,7 @@ img {
   .columna {
     flex:100%
   }
+  
 }
 
 .seccion {
@@ -67,8 +69,7 @@ img {
 }
 
 #titulo {
-    /* background-color: rgb(251, 115, 0); */
-    padding: 40px;
+    /* padding: 40px; */
     font-family: 'Bebas Neue', sans-serif;
     font-size: 80px;
 }
@@ -84,10 +85,10 @@ h1 {
 
 }
 
-/* #lista-ideal {
+#lista-ideal {
     margin-left: 20px;
     list-style-type: disc;
-  } */
+  }
   
 #lista-ideal li {
     margin-bottom: 5px;
