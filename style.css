@@ -164,7 +164,9 @@ h2 {
   display: block;
   width: 100%;
   margin-top: auto;
-  background-color: rgb(252, 115, 0);
+  background-color: rgb(252, 115, 0) !important;
+  border:1px solid black !important;
+  color: black !important;
   font-family: 'Bebas Neue', sans-serif ;
 }
 
@@ -184,8 +186,29 @@ font-family:'Bebas Neue', sans-serif;
 
 .elemento-Eliminar {
   margin-left: 25px;
+  border: 1px solid black !important;
+  background-color: rgb(252, 115, 0) !important;
+  border-radius: 8px;
 }
 
 h5 {
   font-family: 'Bebas Neue', sans-serif;
+}
+
+#btn-vaciar {
+  border: 1px solid black !important;
+  background-color: rgb(252, 115, 0) !important;
+  border-radius: 8px;
+
+}
+
+#btn-finalizar {
+  border: 1px solid black !important;
+  background-color: rgb(252, 115, 0) !important;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+#Carrito {
+  padding: 30px !important;
 }

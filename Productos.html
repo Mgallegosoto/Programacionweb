@@ -40,7 +40,7 @@
     </header>
 
   <!-- Contenido principal -->
-  <main>
+  <main id="Pestaña-productos">
     <div>
         <h1 id="title">Productos</h1>
     </div>
@@ -160,10 +160,13 @@
     </div>
 
     <!-- Carrito de compras -->
-    <h2 id="Carrito">Carrito de compras</h2>
-    <ul id="productos-en-carrito"></ul>
-    <button onclick="vaciarCarrito()" class="btn btn-danger">Vaciar carrito</button>
-    <button onclick="finalizarCompra()" class="btn btn-success">Finalizar compra</button>
+    <div id="Carrito">
+      <h2 > Carrito de compras</h2>
+      <ul id="productos-en-carrito"></ul>
+      <button onclick="vaciarCarrito()" id="btn-vaciar">Vaciar carrito</button>
+      <button onclick="finalizarCompra()" id = "btn-finalizar">Finalizar compra</button>
+    </div>
+
 
   </main>
 

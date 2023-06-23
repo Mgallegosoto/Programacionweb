@@ -26,11 +26,11 @@ function quitarDelCarrito(idProducto) {
       return item.id === idProducto;
     });
   
-    // Si el producto existe en el carrito, decrementar la cantidad
+    // Si el producto existe en el carrito, reducir la cantidad
     if (indiceProducto !== -1) {
       productosEnCarrito[indiceProducto].cantidad--;
   
-      // Si la cantidad llega a 0, eliminar el producto del carrito
+      // Si el producto esta solo una vez, eliminar el producto del carrito
       if (productosEnCarrito[indiceProducto].cantidad === 0) {
         productosEnCarrito.splice(indiceProducto, 1);
       }
@@ -62,7 +62,6 @@ function actualizarCarrito() {
         // Agrega un botón de eliminación al elemento li
         let botonEliminar = document.createElement('button');
         botonEliminar.textContent = 'Eliminar';
-        botonEliminar.classList.add('btn', 'btn-danger', 'boton-eliminar');
         botonEliminar.setAttribute('data-id-producto', item.id);
         botonEliminar.classList.add("elemento-Eliminar")
         botonEliminar.addEventListener('click', function() {
@@ -93,7 +92,6 @@ function obtenerProductoPorId(idProducto) {
       { id: 7, nombre: 'Variedad de telas', precio: 2200 },
       { id: 8, nombre: 'Pintura', precio: 2000 },
       { id: 9, nombre: 'Lápices negros', precio: 750 },
-      // Agrega más productos aquí...
     ];
   
     return productos.find(function(producto) {
@@ -121,9 +119,7 @@ function finalizarCompra() {
       alert("El carrito está vacío");
       return; // Salir de la función sin continuar con la finalización de la compra
     }
-  
-    // Realizar aquí las acciones necesarias para finalizar la compra, como enviar los datos a un servidor, procesar el pago, etc.
-  
+      
     // Mostrar un mensaje al usuario
     alert("Su compra se ha realizado con éxito");
   
