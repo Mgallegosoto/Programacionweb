@@ -12,16 +12,20 @@ font-size: 25px}
   font-size:none;
 }
 
+#TITULO-navbar {
+  font-size: 45px;
+}
 #navbar {
   padding: 0px;
 }
+
 .seccion {
   padding: 80px; 
 }
-.dropdown-menu {
-  padding: 0px;
+#dropdown {
+  /* padding: 0px ; */
+  background-color: rgb(246, 236, 231) ;
 }
-
 .fila {
   box-sizing: border-box;
   display: flex;
