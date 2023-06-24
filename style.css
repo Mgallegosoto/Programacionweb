@@ -67,6 +67,12 @@ img {
   
 }
 
+@media (max-width:960px) {
+  .products-container {
+    justify-content: center !important;
+  }
+}
+
 .seccion {
   padding: 50px;
   background-color: rgb(246, 236, 231);
@@ -167,7 +173,7 @@ h2 {
   background-color: rgb(252, 115, 0) !important;
   border:1px solid black !important;
   color: black !important;
-  font-family: 'Bebas Neue', sans-serif ;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Estilos para el responsive */
@@ -199,6 +205,7 @@ h5 {
   border: 1px solid black !important;
   background-color: rgb(252, 115, 0) !important;
   border-radius: 8px;
+  color: black !important;
 
 }
 
@@ -207,6 +214,8 @@ h5 {
   background-color: rgb(252, 115, 0) !important;
   border-radius: 8px;
   margin-top: 5px;
+  color: black !important;
+
 }
 
 #Carrito {
